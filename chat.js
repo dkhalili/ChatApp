@@ -53,7 +53,7 @@ var server = net.createServer(function(connection) {
 				var parsed = JSON.parse(data);
 				
 				clients.forEach(function(socket) {
-					socket.write(message);
+					socket.write(message+ "\n");
 				})
 
 				parsed.push(message);
